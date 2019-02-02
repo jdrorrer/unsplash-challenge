@@ -1,4 +1,8 @@
 .header-text {
-  font-size: 48px;
+  font-size: 32px;
+  margin: 12px auto;
+  font-family: 'Pacifico', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }

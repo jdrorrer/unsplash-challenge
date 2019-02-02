@@ -1,3 +1,15 @@
-.footer-text {
+.footer {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin: 16px;
+}
+
+.footer-text,
+.social-icons {
   font-size: 16px;
+}
+
+.social-icons a {
+  margin: 0 4px;
 }

@@ -31,7 +31,7 @@ class App extends Component {
         this.setState({ users: data.results, query, loading: false })
       })
       .catch(err => {
-        console.log('Error fetching...', err)
+        console.log('Error fetching users...', err)
       })
   }
 
@@ -44,16 +44,20 @@ class App extends Component {
       .then(data => data.json())
       .then(data => {
         this.setState({ images: data, loading: false })
-        console.log('images', data)
       })
       .catch(err => {
-        console.log('Error fetching...', err)
+        console.log('Error fetching images...', err)
       })
   }
 
   render() {
     return (
       <div className="app-container">
+        <link
+          href="https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro"
+          rel="stylesheet"
+        />
+
         <Header />
 
         <div className="body-container">
@@ -66,6 +70,8 @@ class App extends Component {
 
           <ImageList images={this.state.images} />
         </div>
+
+        <div className="push" />
 
         <Footer />
       </div>

@@ -1,3 +1,13 @@
+.no-images {
+  font-size: 10px;
+  width: 256px;
+}
+
+.no-image-list {
+  text-align: center;
+  margin: 64px auto;
+}
+
 .image-list {
   /* Prevent vertical gaps */
   line-height: 0;
@@ -14,7 +24,7 @@
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
-  padding-bottom: 5px;
+  padding-bottom: 5px !important;
 }
 
 @media (max-width: 1200px) {

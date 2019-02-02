@@ -1,4 +1,17 @@
-ul {
+ul, .user-list {
   list-style-type: none;
   text-align: left;
+}
+
+.user-list li {
+  margin-bottom: 8px;
+}
+
+.no-users {
+  font-size: 8px;
+  width: 96px;
+}
+
+.no-users-list {
+  margin: 0 auto;
 }

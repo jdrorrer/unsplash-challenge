@@ -8,14 +8,24 @@ export default function Sidebar(props) {
     props.onUsernameClick(username)
   }
 
-  const users = props.users.map((user, index) => (
-    <li key={index}>
-      {/* eslint-disable-next-line */}
-      <a href="#" onClick={e => handleUsernameClick(e, user.username)}>
-        {user.username}
-      </a>
-    </li>
-  ))
+  const results = props.users
+  let users
+  if (results.length > 0) {
+    users = results.map((user, index) => (
+      <li key={index}>
+        {/* eslint-disable-next-line */}
+        <a href="#" onClick={e => handleUsernameClick(e, user.username)}>
+          {user.username}
+        </a>
+      </li>
+    ))
+  } else {
+    users = (
+      <li className="no-users">
+        <h1>No users found. Try searching for another username.</h1>
+      </li>
+    )
+  }
 
   return (
     <div>
